@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watermark as PAID</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+    input[type="file"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0 20px;
+    }
+    button {
+      background-color: #0078D4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #005EA2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>💼 Apply "PAID" Watermark</h2>
+
+  <form method="POST" action="/upload" enctype="multipart/form-data">
+    <label for="pdfFile">Select PDF File:</label>
+    <input type="file" name="pdfFile" id="pdfFile" accept=".pdf" required>
+
+    <label for="paidDate">Date Paid:</label>
+    <input type="date" name="paidDate" id="paidDate" required>
+
+    <button type="submit">Watermark PDF</button>
+  </form>
+
+</body>
+</html>
